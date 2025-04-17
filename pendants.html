@@ -10,6 +10,15 @@
 <body>
   <header>
     <div class="logo">Pendants</div>
+    <div id="priceFilter">
+      <label for="minPrice">Min Price:</label>
+      <input type="number" id="minPrice" placeholder="e.g. 100" />
+    
+      <label for="maxPrice">Max Price:</label>
+      <input type="number" id="maxPrice" placeholder="e.g. 1000" />
+    
+      <button onclick="applyPriceFilter()">Filter</button>
+    </div>
     <div class="cart" id="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
   </header>
 
