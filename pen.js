@@ -23,7 +23,35 @@ const products = [
   
   let cartCount = 0;
   let cartItems = [];
+
+  function applyPriceFilter() {
+    const min = parseFloat(document.getElementById('minPrice').value) || 0;
+    const max = parseFloat(document.getElementById('maxPrice').value) || Infinity;
   
+    const filteredProducts = products.filter(product => 
+      product.price >= min && product.price <= max
+    );
+  
+    renderFilteredProducts(filteredProducts);
+  }
+  
+  function renderFilteredProducts(filteredList) {
+    const container = document.getElementById('products');
+    container.innerHTML = '';
+  
+    filteredList.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product';
+      div.innerHTML = `
+        <img src="${product.img}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>$${product.price.toFixed(2)}</p>
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
+      `;
+      container.appendChild(div);
+    });
+  }
+
   function renderProducts() {
     const container = document.getElementById('products');
     container.innerHTML = '';
