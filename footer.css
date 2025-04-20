@@ -1,0 +1,95 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f1f1f1;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+  color: #fff;
+}
+
+.footer .container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .footeer-col {
+  flex: 1 1 220px;
+  margin: 0 15px;
+}
+
+.footer .footeer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 35px;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer .footeer-col ul {
+  list-style: none;
+}
+
+.footer .footeer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer .footeer-col ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer .footeer-col ul li a:hover {
+  color: blue;
+  padding-left: 8px;
+}
+
+.footer .footeer-col .socia-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer .footeer-col li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer .footeer-col a i {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer .footeer-col a i:hover {
+  color: blue;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+  }
+
+  .footer .footeer-col {
+    margin-bottom: 30px;
+  }
+}
