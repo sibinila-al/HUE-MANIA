@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Wheel Filter</title>
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+  <div class="search-container">
+    <div class="color-wheel" id="colorWheel"></div>
+    <div style="position: relative;">
+      <input type="text" id="searchInput" placeholder="Search items..." oninput="searchItems()" aria-label="Search items">
+      <button id="clearBtn" onclick="clearSearch()" aria-label="Refresh">X</button>
+    </div>
+    <button class="clear-color-btn" onclick="clearColor()">Refresh</button>
+  </div>
+
+  <div id="results" class="results-container"></div>
+
+  <script src="search.js"></script>
+</body>
+</html>
+                           
